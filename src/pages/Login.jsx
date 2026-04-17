@@ -22,7 +22,6 @@ function Login() {
       console.error('Login failed', error);
     }
   };
-
   return (
     <div style={{
       minHeight: '100vh',
@@ -71,6 +70,12 @@ function Login() {
               <div className="mt-3">
                 <button className="btn btn-primary w-100" onClick={handleLogin}>Login</button>
               </div>
+              <p
+                     style={{ cursor: "pointer", color: "#4361ee" }}
+                      onClick={() => navigate('/forgot-password')}
+                    >
+                 Forgot Password?
+               </p>
             </div>
           </div>
         </div>
