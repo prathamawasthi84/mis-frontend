@@ -1,6 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './pages/Login'; 
 import ProtectedRoute from "./pages/ProtectedRoute";
@@ -12,6 +13,7 @@ import ResetPassword from "./pages/ResetPassword";
 function App(){
 return (<BrowserRouter>
 <Routes>
+  <Route path="/" element={<Navigate to="/login" replace />}/>
   <Route path="/login" element={<Login />}/>
   <Route path="/dashboard" element={<ProtectedRoute><Dashboard/></ProtectedRoute>}/>
   <Route path="/register" element={<Register />} />

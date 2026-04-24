@@ -10,7 +10,7 @@ function ResetPassword() {
 
   const handleReset = async () => {
     try {
-      await axios.post(`http://localhost:8080/user/reset-password?token=${token}&newPassword=${password}`);
+      await axios.post(`https://web-production-1845c.up.railway.app/user/reset-password?token=${token}&newPassword=${password}`);
       setMessage("Password updated successfully!");
 
       setTimeout(() => {

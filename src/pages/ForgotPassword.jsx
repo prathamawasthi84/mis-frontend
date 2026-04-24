@@ -9,7 +9,7 @@ function ForgotPassword() {
 
   const handleSubmit = async () => {
     try {
-     await axios.post(`http://localhost:8080/user/forgot-password?email=${email}`);
+     await axios.post(`https://web-production-1845c.up.railway.app/user/forgot-password?email=${email}`);
       setMessage("Reset link sent! Check your email.");
     } catch (err) {
       setMessage("Something went wrong.");
