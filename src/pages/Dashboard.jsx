@@ -1,3 +1,4 @@
+// updated
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 import { Routes, Route } from "react-router-dom";
