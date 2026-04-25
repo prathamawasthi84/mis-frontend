@@ -11,7 +11,7 @@ function Login() {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post(`https://web-production-1845c.up.railway.app/user/login`, {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/user/login`, {
         email: email,
         password: password
       });
@@ -76,7 +76,12 @@ function Login() {
                     >
                  Forgot Password?
                </p>
-               
+               <p
+  style={{ cursor: "pointer", color: "#4361ee" }}
+  onClick={() => navigate('/register')}
+>
+  Don't have an account? Register
+</p>
             </div>
           </div>
         </div>
