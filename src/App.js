@@ -9,7 +9,8 @@ import Dashboard from './pages/Dashboard';
 import Register from './pages/Register';
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
-import ManageChains from './chainmanagement/ManageChains';
+import ManageChains from './pages/chain/ManageChains';
+import ManageBrands from './pages/brands/ManageBrands';
 
 function App(){
 return (<BrowserRouter>
@@ -21,6 +22,7 @@ return (<BrowserRouter>
   <Route path="/forgot-password" element={<ForgotPassword />} />
   <Route path="/reset-password/:token" element={<ResetPassword />} />
   <Route path="manage-chains" element={<ManageChains />} />
+  <Route path="manage-brands" element={<ManageBrands />} />
   </Routes>
   </BrowserRouter>
 );
