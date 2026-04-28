@@ -11,7 +11,9 @@ import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import ManageChains from './pages/chain/ManageChains';
 import ManageBrands from './pages/brands/ManageBrands';
-
+import ManageZones from './pages/zones/ManageZones';
+import AddEditZone from './pages/zones/AddEditZone';
+import ManageEstimate from "./pages/estimation/Manageestimate";
 function App(){
 return (<BrowserRouter>
 <Routes>
@@ -21,8 +23,11 @@ return (<BrowserRouter>
   <Route path="/register" element={<Register />} />
   <Route path="/forgot-password" element={<ForgotPassword />} />
   <Route path="/reset-password/:token" element={<ResetPassword />} />
-  <Route path="manage-chains" element={<ManageChains />} />
-  <Route path="manage-brands" element={<ManageBrands />} />
+  <Route path="/manage-chains" element={<ManageChains />} />
+  <Route path="/manage-brands" element={<ManageBrands />} />
+  <Route path="manage-zones" element={<ManageZones />} />
+<Route path="add-zone" element={<AddEditZone />} />
+<Route path="/manage-estimate" element={<ManageEstimate />} />
   </Routes>
   </BrowserRouter>
 );
