@@ -11,3 +11,14 @@ export const getAllEstimations = () => axios.get(`${BASE_URL}/api/estimations`, 
 export const addEstimation = (data) => axios.post(`${BASE_URL}/api/estimations`, data, config());
 export const updateEstimation = (id, data) => axios.put(`${BASE_URL}/api/estimations/${id}`, data, config());
 export const deleteEstimation = (id) => axios.delete(`${BASE_URL}/api/estimations/${id}`, config());
+export const getAllInvoices = (search = '') =>
+  axios.get(`${BASE_URL}/api/invoices${search ? `?search=${search}` : ''}`);
+
+export const createInvoice = (data) =>
+  axios.post(`${BASE_URL}/api/invoices`, data);
+
+export const updateInvoice = (id, emailId) =>
+  axios.put(`${BASE_URL}/api/invoices/${id}?emailId=${emailId}`);
+
+export const deleteInvoice = (id) =>
+  axios.delete(`${BASE_URL}/api/invoices/${id}`);

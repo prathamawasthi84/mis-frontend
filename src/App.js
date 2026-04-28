@@ -14,6 +14,8 @@ import ManageBrands from './pages/brands/ManageBrands';
 import ManageZones from './pages/zones/ManageZones';
 import AddEditZone from './pages/zones/AddEditZone';
 import ManageEstimate from "./pages/estimation/Manageestimate";
+import CreateInvoice from './pages/invoices/CreateInvoice';
+import ManageInvoices from './pages/invoices/ManageInvoices';
 function App(){
 return (<BrowserRouter>
 <Routes>
@@ -28,6 +30,8 @@ return (<BrowserRouter>
   <Route path="manage-zones" element={<ManageZones />} />
 <Route path="add-zone" element={<AddEditZone />} />
 <Route path="/manage-estimate" element={<ManageEstimate />} />
+<Route path="/create-invoice" element={<CreateInvoice />} />
+<Route path="/manage-invoices" element={<ManageInvoices />} />
   </Routes>
   </BrowserRouter>
 );
